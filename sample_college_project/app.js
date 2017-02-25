@@ -3,7 +3,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var config = require('./db_config.json');
+var config = require('./db-config.json');
 app.use(bodyParser.json());
 app.use(express.static(__dirname + "/client"));
 

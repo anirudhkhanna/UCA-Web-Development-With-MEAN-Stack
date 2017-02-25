@@ -30,7 +30,7 @@
     
     c. MongoDB shell - $mongo
 
-9. If everything goes fine - start implementing your project now.
+9. If everything goes fine, start implementing your project now.
 
 10. Refer to requirements.txt for project requirements. Be constructive, add some eye catching features if your want to. best of luck!
 
@@ -76,4 +76,3 @@
 1. $sudo apt-get install apache2-utils
 2. GET: $ab -c 10 -n 100 http://localhost:8080/student/
 3. POST: $ab -T 'application/json' -n 10 -p post.data http://localhost:8080/
-
