@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UI-Router example</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+	<!-- AngularJS -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+	<!-- UI-Router Module -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+
+	<script type="text/javascript" src="app.js"></script>
+</head>
+
+<body ng-app="UIRouterApp">
+
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" ui-sref="#">Angular UI-Router</a>
+			</div>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a ui-sref="board1">Board 1</a></li>
+				<li><a ui-sref="board2">Board 2</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- UI-Router view -->
+	<div class="container">
+		<div ui-view></div>
+	</div>
+
+</body>
+</html>

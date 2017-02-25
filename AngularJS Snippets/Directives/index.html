@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sample Angular</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script type="text/javascript" src="js/my-app.js"></script>
+	</head>
+
+	<body ng-app="classApp">
+
+	<div>	<!-- Without any specific controller -->
+		<input type="text" ng-model="name" ng-init="name='Vaibhav'">
+		<p>
+			Hello, <span ng-bind="name"></span>.
+			<br />
+			Hello, {{name}}.
+		</p>
+	</div>
+
+	<hr />
+
+	<div ng-controller="someController1">	<!-- Controller with $scope -->
+		name = {{name}}, 
+		names = {{names}}
+		<button ng-click="someFunction()">Some button</button>
+	</div>
+
+	<hr />
+
+	<div ng-controller="someController2 as myCtrl">	<!-- Controller with 'this' instead of $scope -->		
+		{{myCtrl.shop}}
+		<ul>
+			<li ng-repeat="shopkeeper in myCtrl.shopkeepers">{{shopkeeper}}</li>
+		</ul>
+	</div>
+
+	<hr />
+
+	<div ng-controller="someController3">	<!-- Using ng-show/ng-hide/filters etc -->
+		<ul>
+			<li ng-repeat="sk in shopkeepers">
+				Name: {{sk.name}}, Description: {{sk.desc}} <span style="background:#fdce00" ng-show="sk.isOpen">Open now!</span>
+			</li>
+		</ul>
+
+		<strong>With filters: </strong>
+		<input type="text" placeholder="Search for description" ng-model="searchString"/>
+		<ul>
+			<li ng-repeat="sk in shopkeepers | filter:searchString">
+				Description: {{sk.desc | uppercase}}
+			</li>
+		</ul>
+
+		<img ng-src="{{image}}" height="150" />
+	</div>
+
+	<hr />
+
+	<div template-one></div>	<!-- Custom directives -->
+
+	<template-two></template-two>
+
+	<hr />
+
+	</body>
+</html>
