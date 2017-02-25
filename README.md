@@ -1,4 +1,4 @@
-# UCA - Web Development With MEAN Stack
+# UCA - Web Development with MEAN Stack
 
 ##Setup
 1. Install Node & NPM
