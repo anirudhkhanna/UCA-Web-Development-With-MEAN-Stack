@@ -1,0 +1,5 @@
+$ mongo
+
+> use college_db;
+> db.createCollection('students');
+> db.students.insert({"name":"Tom", "age":"20"});

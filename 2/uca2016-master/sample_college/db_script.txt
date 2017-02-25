@@ -1,3 +1,0 @@
-use college;
-db.createCollection('students');
-db.students.create({"name":"tom","age":"20"});

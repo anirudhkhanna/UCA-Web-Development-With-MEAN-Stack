@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Sample College: Student Management</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+
+  <script type="text/javascript" src="js/ng-app.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+<head>
+
+<body ng-app="ngApp">
+  <div class="container" ng-controller="mainController as mainCtlr">
+
+    <div  class="row">
+      <header class="page-header">
+        <h1>Sample College: Student Management</h1>
+      </header>
+    </div>
+
+    <div class="row" class="top-buffer">
+      <nav role="navigation">
+
+        <ul class="nav nav-pills nav-justified">
+          <li ng-class="{active: mainCtlr.tab===1}"><a ui-sref="showstudents" ng-click="mainCtlr.selectTab(1)">Show all students</a></li>
+          <li ng-class="{active: mainCtlr.tab===2}"><a ui-sref="addstudent" ng-click="mainCtlr.selectTab(2)">Add a new student</a></li>
+          <li ng-class="{active: mainCtlr.tab===3}"><a ui-sref="updatestudent" ng-click="mainCtlr.selectTab(3)">Update a student</a></li>
+          <li ng-class="{active: mainCtlr.tab===4}"><a ui-sref="deletestudent" ng-click="mainCtlr.selectTab(4)">Delete a student</a></li>
+        </ul>
+
+      </nav>
+    </div>
+
+    <div id="dynamicview" class="row">
+      <div ui-view></div>
+    </div>
+
+  </div>
+</body>
+</html>

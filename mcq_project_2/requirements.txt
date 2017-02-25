@@ -1,0 +1,11 @@
+As teacher:
+I should be able to create a new module, mark it as enabled/disabled
+I should be able to add MCQs for each module
+I should be able to specify the correct answer for every question
+I should be able to set the duration of the exam
+
+As student:
+I should be able to enter my details
+I should be able to open the list of available modules and select the enabled ones
+I should be able to select the correct answers for every question and submit the answers
+I should be able to see the score after submitting the exam

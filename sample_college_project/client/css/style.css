@@ -1,0 +1,22 @@
+
+.page-header {
+  padding-top: 1px;
+}
+
+nav {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
+#dynamicview {
+  margin-top: 20px;
+  background-color: rgba(98, 0, 255, 0.11);
+}
+
+#dynamicview form {
+  padding: 0 1% 0 0;
+}
+
+#dynamicview table {
+	margin: 0;
+}

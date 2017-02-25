@@ -1,0 +1,2 @@
+Simple student management system showing CRUD functionality 
+with the help of RESTful API built with MEAN Stack.

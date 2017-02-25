@@ -1,0 +1,19 @@
+{
+  "name": "sample-college",
+  "version": "1.0.0",
+  "description": "A simple MEAN Stack project for student management system.",
+  "author": "Anirudh",
+  "license": "BSD-2-Clause",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodejs app.js"
+  },
+  "dependencies": {
+    "express": "~4.6.1",
+    "body-parser": "~1.16.1",
+    "mongoose": "~4.8.1"
+  },
+  "devDependencies": {
+  }
+}
