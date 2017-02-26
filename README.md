@@ -14,7 +14,7 @@
 3. Go to your project directory
 
 4. Run $npm install   - it will install required packages automatically (express and json body parser)  
-   OR try npm install --no-bin-links if you get symlink error
+   OR try $npm install --no-bin-links if you get symlink error
 
 5. Run $node app.js and with a browser, open http://localhost:8080/test
 
