@@ -32,7 +32,7 @@
 
 9. If everything goes fine, start implementing your project now.
 
-10. Refer to requirements.txt for project requirements. Be constructive, add some eye catching features if your want to. Best of luck!
+10. Refer to requirements.txt for project requirements. Be constructive, add some eye-catching features if your want to. Best of luck!
 
 ##Load balancing using NGINX
 1. $sudo apt-get install nginx
