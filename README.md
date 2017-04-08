@@ -1,6 +1,6 @@
 # UCA - Web Development with MEAN Stack
 
-##Setup
+## Setup
 1. Install Node & NPM
 
 	a. $sudo apt-get install nodejs
@@ -34,7 +34,7 @@
 
 10. Refer to requirements.txt for project requirements. Be constructive, add some eye-catching features if your want to. Best of luck!
 
-##Load balancing using NGINX
+## Load balancing using NGINX
 1. $sudo apt-get install nginx
 2. You can now make two copies of the project. To demonstrate on local machine, make one listen to port 8081 and another to 8082. Run both the instances.
 3. Make a few changes in /etc/nginx/sites-available/default
@@ -72,7 +72,7 @@
    To restart NGINX - $sudo service nginx restart
 5. Open http://localhost:8080/test. NGINX will balance the load between the two instances in a round-robin fashion.
 
-##Benchmarking a web service
+## Benchmarking a web service
 1. $sudo apt-get install apache2-utils
 2. GET: $ab -c 10 -n 100 http://localhost:8080/student/
 3. POST: $ab -T 'application/json' -n 10 -p post.data http://localhost:8080/
