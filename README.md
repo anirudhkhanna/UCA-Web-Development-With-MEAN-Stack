@@ -16,7 +16,7 @@
 4. Run $npm install   - it will install required packages automatically (express and json body parser)  
    OR try $npm install --no-bin-links if you get symlink error
 
-5. Run $node app.js and with a browser, open http://localhost:8080/test
+5. Run $node app.js (or $nodemon app.js to auto-monitor changes) and with a browser, open http://localhost:8080/test
 
 6. Install MongoDB - $sudo apt-get install mongodb
 
