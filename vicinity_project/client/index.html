@@ -25,17 +25,13 @@
 <!-- Entire page material layout -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-	<!-- Top stub -->
-	<div id="top" class="top-stub">
-	</div>
-
 	<!-- Header -->
 	<header class="mdl-layout__header mdl-layout__header--scroll">
 		<div class="mdl-layout__header-row">
 			<span class="mdl-layout-title"><h4><big><i class="material-icons">place</i> Vicinity</big></h4></span>
 			<!-- Add spacer, to align other items to the right -->
 			<div class="mdl-layout-spacer"></div>
-			<h6 class="mdl-layout--large-screen-only">Find places nearby &bull; Powered by Google Maps &bull; <a href="https://github.com/anirudhkhanna/UCA-Web-Development-with-MEAN-Stack" target="_blank">GitHub</a></h6>
+			<h6 class="mdl-layout--large-screen-only">Find places nearby &bull; Powered by Google Maps</h6>
 		</div>
 	</header>
 
@@ -103,12 +99,6 @@
 				</div>
 			</section>
 
-			<section class="mdl-grid go-to-top-section" ng-show="placesCtrl.places.results.length > 5">
-				<div class="mdl-cell mdl-cell--12-col">
-					<a href="#top">Go to top &uarr;</a>
-				</div>
-			</section>
-
 			<section class="mdl-grid loading-section" ng-show="placesCtrl.loadingFlag">
 				<div class="mdl-cell mdl-cell--12-col">
 					<div class="mdl-progress mdl-js-progress mdl-progress__indeterminate loading-bar"></div>
@@ -118,6 +108,14 @@
 			<section class="mdl-grid notification-section" ng-show="placesCtrl.notificationFlag">
 				<div class="mdl-cell mdl-cell--12-col">
 					<h6 class="notification-text"><i class="material-icons">public</i> {{placesCtrl.notificationMessage}}</h6>
+				</div>
+			</section>
+
+			<section class="mdl-grid footnote-section">
+				<div class="mdl-cell mdl-cell--12-col">
+					<span style="color: #cacaca;"><big>{&nbsp;</big></span>
+					Visit on <a href="https://github.com/anirudhkhanna/UCA-Web-Development-with-MEAN-Stack" target="_blank">GitHub</a> &bull; All location-related data from Google Maps APIs
+					<span style="color: #cacaca;"><big>&nbsp;}</big></span>
 				</div>
 			</section>
 
