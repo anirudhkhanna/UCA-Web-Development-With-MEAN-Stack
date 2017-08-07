@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Vicinity - Find places nearby</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+	<!-- MDL -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+	<!-- AngularJS -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+
+	<!-- Custom -->
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="ng-app.js"></script>
+</head>
+
+<body class="mdl-color--grey-100 mdl-color-text--grey-700" ng-app="ngApp" ng-controller="placesController as placesCtrl">
+
+<!-- Entire page material layout -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+	<!-- Top stub -->
+	<div id="top" class="top-stub">
+	</div>
+
+	<!-- Header -->
+	<header class="mdl-layout__header mdl-layout__header--scroll">
+		<div class="mdl-layout__header-row">
+			<span class="mdl-layout-title"><h4><big><i class="material-icons">location_on</i> Vicinity</big></h4></span>
+			<!-- Add spacer, to align other items to the right -->
+			<div class="mdl-layout-spacer"></div>
+			<h6 class="mdl-layout--large-screen-only">Find places nearby &bull; Powered by Google Maps</h6>
+		</div>
+	</header>
+
+	<!-- Main content -->
+	<main class="mdl-layout__content">
+
+		<!-- Form container -->
+		<div class="form-container">
+
+			<form>
+				<section class="mdl-grid">
+					<div class="mdl-cell mdl-cell--5-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" id="address" ng-model="placesCtrl.query.address">
+						<label class="mdl-textfield__label" for="address">Enter an address</label>
+					</div>
+					<div class="mdl-cell mdl-cell--5-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<select class="mdl-textfield__input" id="type" name="type" ng-model="placesCtrl.query.type">
+							<option></option>
+							<option value="bank">Bank</option>
+							<option value="atm">ATM</option>
+							<option value="shopping_mall">Shopping mall</option>
+							<option value="store">Store</option>
+							<option value="restaurant">Restaurant</option>
+							<option value="bar">Bar</option>
+							<option value="doctor">Doctor</option>
+							<option value="pharmacy">Pharmacy</option>
+							<option value="hospital">Hospital</option>
+							<option value="park">Park</option>
+							<option value="library">Library</option>
+							<option value="lodging">Lodging</option>
+							<option value="airport">Airport</option>
+						</select>
+						<label class="mdl-textfield__label" for="type">Select a place to find nearby</label>
+					</div>
+					<div class="mdl-cell mdl-cell--1-col">
+						<button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" ng-click="placesCtrl.submitQuery()">
+							<i class="material-icons">location_on</i>
+						</button>
+					</div>
+				</section>
+			</form>
+
+		</div>
+
+		<!-- Results container -->
+		<div class="results-container">
+
+			<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp place-section" ng-repeat="place in placesCtrl.places.results">
+				<header class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white" style="background: url('{{place.photo}}'); background-size: cover; background-position: center;">
+				</header>
+				<div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone place-card">
+					<div class="mdl-card__supporting-text">
+						<div class="mdl-grid mdl-grid--no-spacing place-heading">
+							<div class="mdl-cell mdl-cell--8-col">
+								<h4><strong>{{place.name}}</strong></h4>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<span class="mdl-chip" ng-repeat="type in place.types" style="margin-left: 4px; float: right;">
+									<span class="mdl-chip__text">{{type}}</span>
+								</span>
+							</div>
+						</div>
+						<h5>{{place.address}}</h5>
+					</div>
+				</div>
+			</section>
+
+			<section class="mdl-grid go-to-top-section" ng-show="placesCtrl.places.results.length > 5">
+				<div class="mdl-cell mdl-cell--12-col">
+					<a href="#top">Go to top &uarr;</a>
+				</div>
+			</section>
+
+			<section class="mdl-grid loading-section" ng-show="placesCtrl.loadingFlag">
+				<div class="mdl-cell mdl-cell--12-col">
+					<div class="mdl-progress mdl-js-progress mdl-progress__indeterminate loading-bar"></div>
+				</div>
+			</section>
+
+			<section class="mdl-grid notification-section" ng-show="placesCtrl.notificationFlag">
+				<div class="mdl-cell mdl-cell--12-col">
+					<h6 class="notification-text"><i class="material-icons">public</i> {{placesCtrl.notificationMessage}}</h6>
+				</div>
+			</section>
+
+		</div>
+
+	</main>
+
+	<!-- Footer -->
+	<footer class="mdl-mini-footer">
+		<div>
+			An app by <a href="http://anirudhkhanna.github.io" target="_blank">Anirudh Khanna</a> &nbsp;&bull;&nbsp; All location-related data from Google Maps APIs
+		</div>
+	</footer>
+
+</div>
+<!-- /.Page layout over -->
+
+</body>
+</head>

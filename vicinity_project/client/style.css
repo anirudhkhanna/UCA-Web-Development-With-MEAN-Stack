@@ -1,0 +1,62 @@
+
+.mdl-layout__content {
+	padding: 8px;
+	padding-top: 50px;
+}
+
+.top-stub {
+	visibility: hidden;
+}
+
+header.mdl-layout__header .mdl-layout-title {
+	letter-spacing: 2px;
+}
+
+.form-container select.mdl-textfield__input {
+	margin-top: 6px;
+}
+
+section {
+	max-width: 860px;
+}
+
+section.place-section {
+	margin-bottom: 30px;
+}
+
+section.place-section .place-card .mdl-card__supporting-text {
+	width: 95%;
+}
+
+section.place-section .place-heading {
+	margin-bottom: -15px;
+}
+
+section.go-to-top-section {
+	text-align: center;
+}
+
+section.go-to-top-section a {
+	color: #616161;
+	text-decoration: none;
+}
+
+section.loading-section div.loading-bar {
+	margin: 0 auto;
+	margin-top: 30px;
+	max-width: 300px;
+}
+
+section.notification-section .notification-text {
+	font-size: 20px;
+	color: #dc6956;
+}
+
+footer.mdl-mini-footer div {
+	margin: 0 auto;
+	text-align: center;
+}
+
+footer.mdl-mini-footer a {
+	color: #9e9e9e;
+}
