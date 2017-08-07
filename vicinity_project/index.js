@@ -14,19 +14,28 @@ var app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + "/client"));
 
-
-/* API Keys */
-var GOOGLE_GEOCODING_API_KEY = 'AIzaSyB5NtY0HQQrPoYq4A6FnXTgeFL20qn472c';
-var GOOGLE_PLACES_API_KEY = 'AIzaSyBUFOikZUANHuGGpRuAQLxQ8HEa8jkHtFs';
+/* API keys (Set the keys as config vars) */
+var GOOGLE_GEOCODING_API_KEY = process.env.GOOGLE_GEOCODING_API_KEY;
+var GOOGLE_PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 
 
 /* Set up the server */
-var port = 7000;
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
 var server = http.createServer(app);
 server.listen(port);
 server.on('listening', function() {
 	console.log('Server listening at http://' + server.address().address + ':' + server.address().port);
 });
+
+function normalizePort(val) {
+	var port = parseInt(val, 10);
+	if(isNaN(port))
+		return val;
+	if(port >= 0)
+		return port;
+	return false;
+}
 
 
 /* Server request handlers */
