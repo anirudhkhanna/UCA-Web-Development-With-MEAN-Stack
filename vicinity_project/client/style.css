@@ -4,10 +4,6 @@
 	padding-top: 50px;
 }
 
-.top-stub {
-	visibility: hidden;
-}
-
 header.mdl-layout__header a {
 	color: #fff;
 }
@@ -36,22 +32,23 @@ section.place-section .place-heading {
 	margin-bottom: -15px;
 }
 
-section.go-to-top-section {
-	text-align: center;
-}
-
-section.go-to-top-section a {
-	color: #616161;
-	text-decoration: none;
-}
-
 section.loading-section div.loading-bar {
 	margin: 0 auto;
 	margin-top: 30px;
-	max-width: 300px;
+	max-width: 80%;
 }
 
 section.notification-section .notification-text {
 	font-size: 20px;
 	color: #dc6956;
+}
+
+section.footnote-section {
+	margin-top: 100px;
+	color: #616161;
+	text-align: center;
+}
+
+section.footnote-section a {
+	text-decoration: none;
 }
